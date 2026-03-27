@@ -1,3 +1,5 @@
+<%- if context.cluster != "my-k8s-cluster" -%>
+
 # Wait for the Code Server to start
 echo "$(date): Waiting for Code Server to open port ${port}..."
 
@@ -10,3 +12,4 @@ fi
 
 sleep 2
 
+<%- end -%>
